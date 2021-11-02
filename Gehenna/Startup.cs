@@ -1,3 +1,6 @@
+using AutoMapper;
+using Dice;
+using GehennaApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +29,22 @@ namespace GehennaApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            IMapper mapper = ConfigureMappings();
+
+            services.AddSingleton(mapper);
+        }
+
+        private static IMapper ConfigureMappings()
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<RollResult, GehennaRollResult>();
+                cfg.CreateMap<DieResult, GehennaDieResult>();
+            });
+
+            var mapper = config.CreateMapper();
+            return mapper;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

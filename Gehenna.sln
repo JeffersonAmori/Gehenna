@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GehennaApi", "Gehenna\Gehen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AA835D40-1449-476A-858D-E126D2F0DC0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GehennaApi.Models", "GehennaApi.Models\GehennaApi.Models.csproj", "{C4496B7F-CC37-4ED3-B6C7-99C300250C01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{4BF5AFE0-95D0-4DDF-92F8-8D3EA1121430}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,9 +21,17 @@ Global
 		{F2977FD8-C944-4E5A-BA1C-C6224374A15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2977FD8-C944-4E5A-BA1C-C6224374A15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2977FD8-C944-4E5A-BA1C-C6224374A15E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4496B7F-CC37-4ED3-B6C7-99C300250C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4496B7F-CC37-4ED3-B6C7-99C300250C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4496B7F-CC37-4ED3-B6C7-99C300250C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4496B7F-CC37-4ED3-B6C7-99C300250C01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F2977FD8-C944-4E5A-BA1C-C6224374A15E} = {4BF5AFE0-95D0-4DDF-92F8-8D3EA1121430}
+		{C4496B7F-CC37-4ED3-B6C7-99C300250C01} = {4BF5AFE0-95D0-4DDF-92F8-8D3EA1121430}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {019A4323-F87F-4662-8145-FF1F75C9C03D}
