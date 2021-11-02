@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gehenna", "Gehenna\Gehenna.csproj", "{F2977FD8-C944-4E5A-BA1C-C6224374A15E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GehennaApi", "Gehenna\GehennaApi.csproj", "{F2977FD8-C944-4E5A-BA1C-C6224374A15E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AA835D40-1449-476A-858D-E126D2F0DC0D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gehenna.Business.Tests", "Gehenna.Business.Tests\Gehenna.Business.Tests.csproj", "{BFA2B621-3F48-43CC-A385-744DC031CB51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,16 +17,9 @@ Global
 		{F2977FD8-C944-4E5A-BA1C-C6224374A15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2977FD8-C944-4E5A-BA1C-C6224374A15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2977FD8-C944-4E5A-BA1C-C6224374A15E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFA2B621-3F48-43CC-A385-744DC031CB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFA2B621-3F48-43CC-A385-744DC031CB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFA2B621-3F48-43CC-A385-744DC031CB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFA2B621-3F48-43CC-A385-744DC031CB51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{BFA2B621-3F48-43CC-A385-744DC031CB51} = {AA835D40-1449-476A-858D-E126D2F0DC0D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {019A4323-F87F-4662-8145-FF1F75C9C03D}
