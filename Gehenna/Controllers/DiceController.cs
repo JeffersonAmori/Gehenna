@@ -28,13 +28,14 @@ namespace GehennaApi.Controllers
         }
 
         // GET api/<ValuesController>/1d6
-        [HttpGet("{s}")]
-        public ActionResult<GehennaRollResult> Get(string s)
+        [HttpGet("{diceExpression}")]
+        public ActionResult<GehennaRollResult> Get(string diceExpression)
         {
             try
             {
-                return _mapper.Map<GehennaRollResult>(
-                    _diceService.Roll(s));
+                return Ok(
+                    _mapper.Map<GehennaRollResult>(
+                        _diceService.Roll(diceExpression)));
             }
             catch (DiceException diceException)
             {
