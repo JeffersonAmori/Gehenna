@@ -1,6 +1,7 @@
 ﻿using Antlr4.Runtime;
 using AutoMapper;
 using Dice;
+using Gehenna.Interfaces.Services;
 using GehennaApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -18,10 +19,12 @@ namespace GehennaApi.Controllers
     public class DiceController : ControllerBase
     {
         private readonly IMapper _mapper;
+        private readonly IDiceService _diceService;
 
-        public DiceController(IMapper mapper)
+        public DiceController(IMapper mapper, IDiceService diceService)
         {
             _mapper = mapper;
+            _diceService = diceService;
         }
 
         // GET api/<ValuesController>/1d6
@@ -30,7 +33,8 @@ namespace GehennaApi.Controllers
         {
             try
             {
-                return _mapper.Map<GehennaRollResult>(Roller.Roll(s));
+                return _mapper.Map<GehennaRollResult>(
+                    _diceService.Roll(s));
             }
             catch (DiceException diceException)
             {

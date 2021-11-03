@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GehennaApi.Models
+namespace Gehenna.Models
 {
     public class GehennaRollResult
     {

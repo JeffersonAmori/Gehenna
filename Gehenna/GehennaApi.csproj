@@ -14,6 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Gehenna.Business\Gehenna.Business.csproj" />
+    <ProjectReference Include="..\Gehenna.Interfaces\Gehenna.Interfaces.csproj" />
+    <ProjectReference Include="..\Gehenna.Models\Gehenna.Models.csproj" />
     <ProjectReference Include="..\GehennaApi.Models\GehennaApi.Models.csproj" />
   </ItemGroup>
 

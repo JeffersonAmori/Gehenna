@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="DiceRoller" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gehenna.Interfaces\Gehenna.Interfaces.csproj" />
+    <ProjectReference Include="..\Gehenna.Models\Gehenna.Models.csproj" />
   </ItemGroup>
 
 </Project>

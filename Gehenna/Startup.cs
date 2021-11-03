@@ -1,6 +1,7 @@
 using AutoMapper;
 using Dice;
 using GehennaApi.Models;
+using Gehenna.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gehenna.Business.Services;
+using Gehenna.Interfaces.Services;
 
 namespace GehennaApi
 {
@@ -33,14 +36,17 @@ namespace GehennaApi
             IMapper mapper = ConfigureMappings();
 
             services.AddSingleton(mapper);
+            services.AddTransient<IDiceService, DiceService>();
         }
 
         private static IMapper ConfigureMappings()
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<RollResult, GehennaRollResult>();
-                cfg.CreateMap<DieResult, GehennaDieResult>();
+                cfg.CreateMap<RollResult, Gehenna.Models.GehennaRollResult>();
+                cfg.CreateMap<Gehenna.Models.GehennaRollResult, Models.GehennaRollResult>();
+                cfg.CreateMap<DieResult, Gehenna.Models.GehennaDieResult>();
+                cfg.CreateMap<Gehenna.Models.GehennaDieResult, Models.GehennaDieResult>();
             });
 
             var mapper = config.CreateMapper();
