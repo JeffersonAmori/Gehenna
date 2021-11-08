@@ -1,4 +1,4 @@
-﻿namespace GehennaApi.Models
+﻿namespace GehennaApi.Models.Dice
 {
     public struct GehennaDieResult
     {
